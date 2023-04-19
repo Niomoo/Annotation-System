@@ -9,7 +9,7 @@ const passport = require("passport");
 // getting the local authentication type
 const LocalStrategy = require("passport-local").Strategy;
 
-const publicRoot = "C://Users/jenny/Desktop/IIR_lab/BioCreative/annotation_system/dist";
+const publicRoot = "C://Users/jenny/Desktop/IIR_lab/BioCreative/annotation_system/frontend/dist";
 app.use(express.static(publicRoot));
 
 app.use(bodyParser.json());
