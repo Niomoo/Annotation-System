@@ -3,25 +3,30 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import Dashboard from '@/components/Dashboard'
-
+import CreateAccount from '@/components/CreateAccount'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: "/hello",
-      name: "HelloWorld",
+      path: '/hello',
+      name: 'HelloWorld',
       component: HelloWorld
     },
     {
-      path: "/",
-      name: "Login",
+      path: '/',
+      name: 'Login',
       component: Login
     },
     {
-      path: "/dashboard",
-      name: "Dashboard",
+      path: '/dashboard',
+      name: 'Dashboard',
       component: Dashboard
+    },
+    {
+      path: '/CreateAccount',
+      name: 'CreateAccount',
+      component: CreateAccount
     }
   ]
-});
+})
