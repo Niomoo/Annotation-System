@@ -7,7 +7,6 @@
             <input type='password' name='password' v-model="password"/><br>
             <button @click="login()" type="button">Login</button>
         </form>
-        
     </div>
 </template>
 <script>
@@ -15,7 +14,7 @@ import router from '../router'
 import axios from 'axios'
 export default
 {
-  data(){
+  data () {
     return {
       error: ''
     }
