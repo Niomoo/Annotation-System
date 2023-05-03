@@ -42,16 +42,16 @@ const login = async (req, res) => {
 			} 
 		});
         console.log(user)
-        // if(!user && email =="sys@iir"){
-            // const data = {
-                // userName: 'sys',
-                // email: 'sys@iir',
-                // password: await bcrypt.hash('iir', 10),
-                // role: 0,
-                // active: true,
-            // };
-            // sysAdmin = await User.create(data);
-        // }
+        if(!user && email =="sys@iir"){
+            const data = {
+                userName: 'sys',
+                email: 'sys@iir',
+                password: await bcrypt.hash('iir', 10),
+                role: 0,
+                active: true,
+            };
+            sysAdmin = await User.create(data);
+        }
 		if (user) {
 			const isSame = await bcrypt.compare(String(password), String(user.password));
 			if (isSame) {

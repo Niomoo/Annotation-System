@@ -30,7 +30,8 @@ export default
           router.push('/CreateAccount')
         })
         .catch((e) => {
-          this.error = 'Login Error roi'
+          this.error = 'Sai rồi em'
+          window.alert(e.response.data)
           console.log(e.response.data)
         })
     }
