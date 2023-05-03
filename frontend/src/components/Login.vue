@@ -3,9 +3,9 @@
         <h2>Login</h2>
         <div v-if='error'>{{ error }}</div>
         <form>
-            <input type='text' name='email' v-model="email" /><br>
-            <input type='password' name='password' v-model="password"/><br>
-            <button @click="login()" type="button">Login</button>
+            <input class="border" type='text' name='email' v-model="email" /><br>
+            <input class="border" type='password' name='password' v-model="password"/><br>
+            <button class="bg-blue-100" @click="login()" type="button">Login</button>
         </form>
     </div>
 </template>
@@ -16,7 +16,9 @@ export default
 {
   data () {
     return {
-      error: ''
+      error: '',
+      email: '',
+      password: ''
     }
   },
   methods: {
