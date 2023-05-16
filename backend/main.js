@@ -25,4 +25,4 @@ db.sequelize.sync({ force: true }).then(() => {
 app.use('/api', userRoutes)
 
 //listening to server connection
-app.listen(PORT, () => console.log('Server is connected on ${PORT}'))
+app.listen(PORT, () => console.log('Server is connected on {PORT}'))

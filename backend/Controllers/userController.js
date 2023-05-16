@@ -20,8 +20,6 @@ const createAccount = async (req, res) => {
 				expiresIn: 1 * 24 * 60 * 60 * 1000,
 		});
 		res.cookie("jwt", token, { maxAge: 1 * 24 * 60 * 60, httpOnly: true });
-		console.log("user", JSON.stringify(user, null, 2));
-		console.log(token);
 		return res.status(201).send(user);
 		} 
 		else {
@@ -41,12 +39,11 @@ const login = async (req, res) => {
                 active: true
 			} 
 		});
-        console.log(user)
         if(!user && email =="sys@iir"){
             const data = {
                 userName: 'sys',
                 email: 'sys@iir',
-                password: await bcrypt.hash('iir', 10),
+                password: await bcrypt.hash(password, 10),
                 role: 0,
                 active: true,
             };
@@ -59,7 +56,6 @@ const login = async (req, res) => {
 					expiresIn: 1 * 24 * 60 * 60 * 1000,
 				});
 				res.cookie("jwt", token, { maxAge: 1 * 24 * 60 * 60, httpOnly: true });
-				console.log("User logined successfully");
 				return res.status(201).send('Login Successfully');
 			} 
 			else {
