@@ -13,7 +13,7 @@
                   <input type="checkbox" name="remember-me" id="remember-me" class="mr-2">
                   <span class="text-sm">Remember me</span>
                 </label>
-                <a href="#" class="text-sm text-gray-500 hover:text-gray-600 mr-13">Forgot password?</a>
+                <a href="#/ForgotPassword" class="text-sm text-gray-500 hover:text-gray-600 mr-13">Forgot password?</a>
               </div>
               <button class="border h-10 bg-blue-300 rounded-lg shadow-md w-5/6" @click="login()" type="button">Login</button>
               <a href="#" class="mt-4 text-sm text-gray-500 hover:text-gray-600">Don't have an account? Create one now!</a>

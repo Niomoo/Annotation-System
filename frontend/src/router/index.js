@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import Dashboard from '@/components/Dashboard'
 import CreateAccount from '@/components/CreateAccount'
+import ForgotPassword from '@/components/ForgotPassword'
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +28,11 @@ export default new Router({
       path: '/createaccount',
       name: 'CreateAccount',
       component: CreateAccount
+    },
+    {
+      path: '/forgotpassword',
+      name: 'ForgotPassword',
+      component: ForgotPassword
     }
   ]
 })
