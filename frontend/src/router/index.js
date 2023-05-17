@@ -5,6 +5,7 @@ import Login from '@/components/Login'
 import Dashboard from '@/components/Dashboard'
 import CreateAccount from '@/components/CreateAccount'
 import ForgotPassword from '@/components/ForgotPassword'
+import CreateSuccess from '@/components/CreateSuccess'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +34,11 @@ export default new Router({
       path: '/forgotpassword',
       name: 'ForgotPassword',
       component: ForgotPassword
+    },
+    {
+      path: '/success',
+      name: 'CreateSuccess',
+      component: CreateSuccess
     }
   ]
 })
